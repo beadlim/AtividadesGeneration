@@ -1,0 +1,44 @@
+package orientacaoObjetos2;
+
+public class Vendedor extends ClasseFuncionario {
+
+	  private String loja;
+
+
+	public Vendedor(String nome, int idade, String cargo, String endereco, int telefone, String loja) {
+		super(nome, idade, cargo, endereco, telefone);
+		this.loja = loja;
+	}
+
+
+	public String getLoja() {
+		return loja;
+	}
+
+	public void setLoja(String loja) {
+		this.loja = loja;
+	}
+	  
+	@Override
+	public void visualizar() {
+	        System.out.println("\nDados do candidato a Vendedor: ");
+	        System.out.println("Nome: " + getNome());
+	        System.out.println("Idade: " + getIdade());
+	        System.out.println("Cargo: " + getCargo());
+	        System.out.println("Endereço: " + getEndereco());
+	        System.out.println("Telefone: " + getTelefone());
+	        System.out.println("Loja: " + loja); 
+	}
+	
+	
+	@Override
+	public void validarIdade() {
+	    try {
+	        if (getIdade() < 18) {
+	            throw new ArithmeticException("A idade do vendedor não atende aos requisitos mínimos!");
+	        }
+	    } catch (ArithmeticException e) {
+	        System.err.println("Exceção de idade inválida para Vendedor: " + e.getMessage());
+	    }
+	}
+}

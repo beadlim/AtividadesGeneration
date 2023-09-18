@@ -1,0 +1,11 @@
+package orientacaoObjetos2;
+
+public class TestaFuncionario {
+
+	public static void main(String[] args) {
+		
+		
+		ClasseFuncionario funcionario1 = new ClasseFuncionario("Beatriz Lima", 27, "Desenvolvedora Web Junior", "Vila do Chaves", 40028922);
+
+		funcionario1.visualiza();
+	}

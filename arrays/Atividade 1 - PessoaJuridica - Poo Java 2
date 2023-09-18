@@ -1,0 +1,30 @@
+package orientacaoObjetos;
+
+public class PessoaJuridica extends PessoaFisica {
+	
+	private String CNPJ;
+
+	public PessoaJuridica(String nome, int idade, String profissao, String email, int telefone, String cPF,
+			String nacionalidade, String cNPJ) {
+		super(nome, idade, profissao, email, telefone, cPF, nacionalidade);
+		CNPJ = cNPJ;
+	}
+
+	public String getCNPJ() {
+		return CNPJ;
+	}
+
+	public void setCNPJ(String cNPJ) {
+		CNPJ = cNPJ;
+	}
+	
+	@Override
+	public void visualiza()  {
+		super.visualiza();
+		System.out.println("CNPJ: " + this.CNPJ);
+	}
+	
+	
+	
+
+}

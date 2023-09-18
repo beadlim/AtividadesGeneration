@@ -1,0 +1,22 @@
+package orientacaoObjetos;
+
+public class ClientePessoaFisica extends ClasseCliente {
+
+    private String cpf;
+
+    public ClientePessoaFisica(String nome, int idade, String profissao, String email, int telefone, String cpf) {
+        super(nome, idade, profissao, email, telefone);
+        this.cpf = cpf;
+    }
+
+    @Override
+    public void visualizar() {
+        System.out.println("Dados do Cliente Pessoa Física:");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Idade: " + getIdade());
+        System.out.println("Profissão: " + getProfissao());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Telefone: " + getTelefone());
+        System.out.println("CPF: " + cpf);
+    }
+}

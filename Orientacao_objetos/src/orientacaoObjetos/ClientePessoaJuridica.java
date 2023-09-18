@@ -1,0 +1,42 @@
+package orientacaoObjetos;
+
+public class ClientePessoaJuridica extends ClasseCliente {
+
+    private String cnpj;
+
+    public ClientePessoaJuridica(String nome, int idade, String profissao, String email, int telefone, String cnpj) {
+        super(nome, idade, profissao, email, telefone);
+        this.cnpj = cnpj;
+        
+    }
+
+    public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	@Override
+    public void visualizar() {
+        System.out.println("\nDados do Cliente Pessoa Jurídica:");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Idade: " + getIdade());
+        System.out.println("Profissão: " + getProfissao());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Telefone: " + getTelefone());
+        System.out.println("CNPJ: " + cnpj);
+    }
+    
+    @Override
+	public void validarDados() {
+	    try {
+	        if (getCnpj() == null || cnpj.isEmpty()) {
+	            throw new IllegalArgumentException("CNPJ inválido: Não é uma String.");
+	        }
+	    } catch (IllegalArgumentException e) {
+	    	System.err.println("Exceção de CNPJ inválido: " + e.getMessage());
+}
+    }
+}

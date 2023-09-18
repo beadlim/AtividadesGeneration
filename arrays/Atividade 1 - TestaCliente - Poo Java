@@ -1,0 +1,18 @@
+package orientacaoObjetos;
+
+public class TestaCliente {
+		
+	public static void main(String[] args) {
+		
+		ClasseCliente cliente1 = new ClasseCliente("Maria dos Santos", 40, "Advogada", "mariasantos@gmail.com", 987554123);
+		
+		
+	    cliente1.visualiza();
+	    
+	    }
+    
+
+	}
+
+	
+	

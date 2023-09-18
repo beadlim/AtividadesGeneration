@@ -1,0 +1,41 @@
+package orientacaoObjetos;
+
+public class PessoaFisica extends ClasseCliente {
+	
+	private String CPF;
+	private String nacionalidade;
+	
+	public PessoaFisica(String nome, int idade, String profissao, String email, int telefone, String cPF,
+			String nacionalidade) {
+		super(nome, idade, profissao, email, telefone);
+		CPF = cPF;
+		this.nacionalidade = nacionalidade;
+	}
+
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+    
+	   @Override
+	public void visualiza() {
+		
+		super.visualiza();
+		System.out.println("CPF: " + this.CPF);
+		System.out.println("Nacionalidade: " + this.nacionalidade);
+		
+	}
+	   
+
+	}

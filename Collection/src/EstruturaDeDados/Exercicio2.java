@@ -1,0 +1,69 @@
+package EstruturaDeDados;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+
+		Stack<String> pilha = new Stack<String>();
+		 Scanner leitor = new Scanner(System.in);
+		 
+		 int opcao;
+	        do {
+	            System.out.println("\nMenu:");
+	            System.out.println("1 - Adicionar um novo livro na Pilha.");
+	            System.out.println("2 - Listar todos os livros da Pilha.");
+	            System.out.println("3 - Retirar um livro da pilha.");
+	            System.out.println("0 - O programa deve ser finalizado.");
+	            System.out.print("Escolha a opção: ");
+	            
+	            opcao = leitor.nextInt(); 
+
+	            switch (opcao) {
+	                case 1:
+	                    System.out.print("\nDigite o nome do livro: ");
+	                    leitor.skip("\\R?");
+	                    String nomeLivro = leitor.nextLine();
+	                    pilha.push(nomeLivro);
+	                    System.out.println(nomeLivro + " foi adicionado na pilha.");
+	                    break;
+
+	                case 2:
+	                    if (pilha.isEmpty()) {
+	                        System.out.println("A Pilha está vazia!");
+	                    } else {
+	                        System.out.println("Os livros que estão na pilha: ");
+	                        for (String livro : pilha) {
+	                            System.out.println(pilha);
+	                        }
+	                    }
+	                    break;
+
+	                case 3:
+	                    if (pilha.isEmpty()) {
+	                        System.out.println("A Fila está vazia!");
+	                    } else {
+	                        System.out.println("\nRetira da fila: " + pilha.pop());
+	                    }
+	                    break;
+
+	                case 0:
+	                    System.out.println("Programa Finalizado!");
+	                    break;
+
+	                default:
+	                    System.out.println("Opção inválida!");
+	                    break;
+	            }
+
+	        } while (opcao != 0);
+	    }
+		
+		
+	
+		}
+	
+	

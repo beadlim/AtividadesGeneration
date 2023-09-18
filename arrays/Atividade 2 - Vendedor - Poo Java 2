@@ -1,0 +1,25 @@
+package orientacaoObjetos2;
+
+public class Vendedor extends Gerente {
+
+	  private String loja;
+
+	public Vendedor(String nome, int idade, String cargo, String endereco, int telefone, String setor, String loja) {
+		super(nome, idade, cargo, endereco, telefone, setor);
+		this.loja = loja;
+	}
+
+	public String getLoja() {
+		return loja;
+	}
+
+	public void setLoja(String loja) {
+		this.loja = loja;
+	}
+	  
+	@Override
+	public void visualiza() {
+		super.visualiza();
+		System.out.println("Loja: " + this.getLoja());
+	}
+}

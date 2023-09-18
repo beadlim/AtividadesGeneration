@@ -1,0 +1,13 @@
+package orientacaoObjetos2;
+
+public class TestaFuncionario {
+
+	public static void main(String[] args) {
+		
+		
+		Vendedor funcionario1 = new Vendedor ("Beatriz Lima", 27, "Desenvolvedora Web Junior", "Vila do Chaves", 40028922, "Vendas", "Quitanda da dona Florinda");
+
+		funcionario1.visualiza();
+	}
+
+}

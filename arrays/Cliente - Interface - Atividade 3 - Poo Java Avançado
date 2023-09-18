@@ -1,0 +1,7 @@
+package orientacaoObjetos;
+
+public interface Cliente {
+
+	    void visualizar();
+
+}

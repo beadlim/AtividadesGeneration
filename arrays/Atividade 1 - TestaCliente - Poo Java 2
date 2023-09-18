@@ -1,0 +1,15 @@
+package orientacaoObjetos;
+
+public class TestaCliente {
+		
+	public static void main(String[] args) {
+		
+		PessoaJuridica cliente1 = new PessoaJuridica("Maria dos Santos", 40, "Advogada", "mariasantos@gmail.com", 987554123, "0000000000", "Brasileira", "000000000000");
+		
+		
+	    cliente1.visualiza();
+	    
+	    }
+    
+
+	}

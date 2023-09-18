@@ -1,0 +1,17 @@
+package orientacaoObjetos;
+
+public class TestaCliente {
+
+	public static void main(String[] args) {
+		
+		ClientePessoaFisica clientePF = new ClientePessoaFisica("Maria dos Santos", 30, "Engenheira", "maria@gmail.com", 123456789, "123.456.789-01");
+
+        ClientePessoaJuridica clientePJ = new ClientePessoaJuridica("Empresa X", 5, "Tecnologia", "empresa@gmail.com", 987654321, "12.345.678/0001-90");
+
+        clientePF.visualizar();
+       
+        clientePJ.visualizar();
+
+	}
+
+}
